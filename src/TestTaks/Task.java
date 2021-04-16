@@ -17,22 +17,23 @@ public class Task {
   private String descripcion;
   private Boolean estado;
   private LocalDate vencimiento;
-  private int numTask;
+  private int id;
+
     
     
-    public Task(String descripcion, LocalDate vencimiento){ 
+    public Task(int id, String descripcion, LocalDate vencimiento){ 
         this.descripcion = descripcion;
         this.estado = false; //Inicia siempre sin finalizar.
         this.vencimiento = vencimiento;
-        this.numTask = numTask;
+        this.id = id;
     }
 
-    public int getNumTask() {
-        return numTask;
+    public int getId() {
+        return id;
     }
 
-    public void setNumTask(int numTask) {
-        this.numTask = numTask;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getDescripcion() {
@@ -61,7 +62,7 @@ public class Task {
     
 @Override
     public String toString() {
-        return "Tarea = {" + "Descripcion= " + descripcion + ", Fecha vencimiento= " + vencimiento + ", Estado de tarea= " + estado + '}';
+        return "Tarea = {" + "ID= " + id + " Descripcion= " + descripcion + ", Fecha vencimiento= " + vencimiento + ", Estado de tarea= " + estado + '}';
     }
 }
 
